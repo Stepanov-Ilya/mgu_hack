@@ -27,9 +27,9 @@ ENV APP_MODULE=${APP_NAME}.routes:app
 # В этом режиме нельзя использовать глобальные переменные, т.к. они будут уникальными для каждого потока
 ENV MAX_WORKERS=1
 
-RUN nano /etc/apt/sources.list
-RUN deb http://nginx.org/packages/ubuntu/ focal nginx
-RUN deb-src http://nginx.org/packages/ubuntu/ focal nginx
+# RUN nano /etc/apt/sources.list
+# RUN deb http://nginx.org/packages/ubuntu/ focal nginx
+# RUN deb-src http://nginx.org/packages/ubuntu/ focal nginx
 
 
 COPY ./backend/requirements.txt /app/
