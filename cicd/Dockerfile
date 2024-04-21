@@ -28,7 +28,9 @@ ENV APP_MODULE=${APP_NAME}.routes:app
 ENV MAX_WORKERS=1
 
 COPY ./backend/requirements.txt /app/
-RUN apt update && apt install -y nginx && pip install -U -r /app/requirements.txt
+RUN apt update
+RUN apt install -y nginx
+RUN pip install -U -r /app/requirements.txt
 
 RUN mkdir -p /app/uploads
 
