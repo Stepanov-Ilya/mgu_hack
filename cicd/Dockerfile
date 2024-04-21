@@ -33,6 +33,7 @@ ENV MAX_WORKERS=1
 
 
 COPY ./backend/requirements.txt /app/
+RUN apt-get update
 RUN apt install -y nginx
 RUN pip install -U -r /app/requirements.txt
 
